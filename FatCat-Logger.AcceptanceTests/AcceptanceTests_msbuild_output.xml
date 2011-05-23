@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<results name=" NBehave.Narrator.Framework" version=" Version=0.5.0.252" date="5/23/2011" time="1:10 PM" themes="1" stories="1" scenarios="1" scenariosFailed="0" scenariosPending="0">
+  <theme name="" time="0.0270027" stories="1" scenarios="1" scenariosFailed="0" scenariosPending="0">
+    <stories>
+      <story name="" time="0.0290029" scenarios="1" scenariosFailed="0" scenariosPending="0">
+        <narrative>
+</narrative>
+        <scenarios>
+          <scenario name="Hook Up A Generic Feature" time="0" outcome="passed">
+            <actionStep name="&#x9;Given I want to test my hook up" outcome="passed" />
+            <actionStep name="&#x9;When hook up my tests" outcome="passed" />
+            <actionStep name="&#x9;Then my hook up should pass" outcome="passed" />
+          </scenario>
+        </scenarios>
+      </story>
+    </stories>
+  </theme>
+</results>

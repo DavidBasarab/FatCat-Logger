@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1E1D7566
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FatCat-Logger.UnitTests", "FatCat-Logger.UnitTests\FatCat-Logger.UnitTests.csproj", "{41A338EE-3C92-4733-BA9E-0701EF9B5776}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FatCat-Logger.AcceptanceTests", "FatCat-Logger.AcceptanceTests\FatCat-Logger.AcceptanceTests.csproj", "{A94D0902-FB23-42BB-B90A-9A67640C4E38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,11 +23,16 @@ Global
 		{41A338EE-3C92-4733-BA9E-0701EF9B5776}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41A338EE-3C92-4733-BA9E-0701EF9B5776}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41A338EE-3C92-4733-BA9E-0701EF9B5776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A94D0902-FB23-42BB-B90A-9A67640C4E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A94D0902-FB23-42BB-B90A-9A67640C4E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A94D0902-FB23-42BB-B90A-9A67640C4E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A94D0902-FB23-42BB-B90A-9A67640C4E38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{41A338EE-3C92-4733-BA9E-0701EF9B5776} = {1E1D7566-F521-4FA7-AFFD-882BF68C5282}
+		{A94D0902-FB23-42BB-B90A-9A67640C4E38} = {1E1D7566-F521-4FA7-AFFD-882BF68C5282}
 	EndGlobalSection
 EndGlobal

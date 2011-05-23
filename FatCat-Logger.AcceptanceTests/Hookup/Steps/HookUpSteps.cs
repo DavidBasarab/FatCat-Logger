@@ -12,20 +12,20 @@ namespace FatCat_Logger.AcceptanceTests.Hookup.Steps
     {
         private int _hookUpNumber;
 
-        [Given]
-        public void Given_I_want_to_test_my_hook_up()
+        [Given("I want to test my hook up")]
+        public void GivenIWantToTestMyHookUp()
         {
             _hookUpNumber = 42;
         }
 
-        [When]
-        public void When_hook_up_my_tests()
+        [When("hook up my tests")]
+        public void WhenHookUpMyTests()
         {
             _hookUpNumber = 42 + 10;
         }
 
-        [Then]
-        public void Then_my_hook_up_should_pass()
+        [Then("my hook up should pass")]
+        public void ThenMyHookUpShouldPass()
         {
             _hookUpNumber.ShouldEqual(52);
         }

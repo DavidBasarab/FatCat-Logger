@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<results name=" NBehave.Narrator.Framework" version=" Version=0.5.0.252" date="5/23/2011" time="1:10 PM" themes="1" stories="1" scenarios="1" scenariosFailed="0" scenariosPending="0">
-  <theme name="" time="0.0270027" stories="1" scenarios="1" scenariosFailed="0" scenariosPending="0">
+<results name=" NBehave.Narrator.Framework" version=" Version=0.5.0.252" date="5/23/2011" time="1:17 PM" themes="1" stories="1" scenarios="1" scenariosFailed="0" scenariosPending="0">
+  <theme name="" time="0.030003" stories="1" scenarios="1" scenariosFailed="0" scenariosPending="0">
     <stories>
-      <story name="" time="0.0290029" scenarios="1" scenariosFailed="0" scenariosPending="0">
+      <story name="" time="0.0310031" scenarios="1" scenariosFailed="0" scenariosPending="0">
         <narrative>
 </narrative>
         <scenarios>

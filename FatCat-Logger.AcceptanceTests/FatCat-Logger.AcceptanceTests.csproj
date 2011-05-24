@@ -31,28 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NBehave.Narrator.Framework">
+    <Reference Include="NBehave.Narrator.Framework, Version=0.5.0.252, Culture=neutral, PublicKeyToken=d421feca0f4a05f6, processorArchitecture=MSIL">
       <HintPath>..\packages\NBehave_0.5.0.252\v3.5\NBehave.Narrator.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="NBehave.Spec.Framework">
+    <Reference Include="NBehave.Spec.Framework, Version=0.5.0.252, Culture=neutral, PublicKeyToken=d421feca0f4a05f6, processorArchitecture=MSIL">
       <HintPath>..\packages\NBehave_0.5.0.252\v3.5\NBehave.Spec.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="NBehave.Spec.NUnit">
+    <Reference Include="NBehave.Spec.NUnit, Version=0.5.0.252, Culture=neutral, PublicKeyToken=d421feca0f4a05f6, processorArchitecture=MSIL">
       <HintPath>..\packages\NBehave_0.5.0.252\v3.5\NBehave.Spec.NUnit.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=2.5.9.10348, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NBehave_0.5.0.252\v3.5\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.mocks, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.mocks.dll</HintPath>
-    </Reference>
-    <Reference Include="NUnit.Should">
-      <HintPath>..\packages\NUnit.Should.1.0.2.0\lib\NET30\NUnit.Should.dll</HintPath>
-    </Reference>
-    <Reference Include="pnunit.framework">
-      <HintPath>..\packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,15 +51,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Hookup\Steps\HookUpSteps.cs" />
+    <Compile Include="Steps\HookUpSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\LoggingInterfaceSteps.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="AcceptanceTests.msbuild" />
-    <None Include="Hookup\Features\Hookup.feature">
+    <ProjectReference Include="..\FatCat-Logger\FatCat-Logger.csproj">
+      <Project>{7FE02001-3223-4015-9B9C-527B7D1F35DA}</Project>
+      <Name>FatCat-Logger</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AcceptanceTests.msbuild">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Features\Hookup.feature">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Features\LoggerInterface.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

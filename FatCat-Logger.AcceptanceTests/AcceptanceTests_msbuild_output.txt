@@ -4,3 +4,17 @@ Scenario: Hook Up A Generic Feature
 	Given I want to test my hook up
 	When hook up my tests
 	Then my hook up should pass
+Feature: 
+
+Scenario: Logging Interface will expose a Log.Message
+	Given I want to log a message
+	When I load the FatCat-Logger .dll
+	Then I should have a method to log a message
+Scenario: Logging Interface will expose a Log.Message with a string for a message
+	Given I want to log a message
+	When I load the FatCat-Logger .dll
+	Then I should have a method to log a message taking a string
+Scenario: Logging Interface will expose a Log.Message with a arguments
+	Given I want to log a message
+	When I load the FatCat-Logger .dll
+	Then I should have a method to log a message taking a arguments

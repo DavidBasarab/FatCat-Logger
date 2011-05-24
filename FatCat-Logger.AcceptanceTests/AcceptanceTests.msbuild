@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="3.5" DefaultTargets="AcceptanceTests" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <UsingTask AssemblyFile="C:\Code\FatCat-Logger\packages\NBehave_0.5.0.252\v3.5\NBehave.MSBuild.dll" TaskName="NBehave.MSBuild.NBehaveTask" />
+  <UsingTask AssemblyFile="..\packages\NBehave_0.5.0.252\v3.5\NBehave.MSBuild.dll" TaskName="NBehave.MSBuild.NBehaveTask" />
   <PropertyGroup>
   </PropertyGroup>
   <Target Name="build">
@@ -13,6 +13,6 @@
       XmlOutputFile="AcceptanceTests_msbuild_output.xml"
       TextOutputFile="AcceptanceTests_msbuild_output.txt"
       TestAssemblies="bin\Debug\FatCat-Logger.AcceptanceTests.dll"
-      ScenarioFiles="Hookup\Features\*"/>
+      ScenarioFiles="Features\*"/>
   </Target>
 </Project>

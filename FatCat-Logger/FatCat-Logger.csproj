@@ -8,7 +8,7 @@
     <ProjectGuid>{7FE02001-3223-4015-9B9C-527B7D1F35DA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FatCat_Logger</RootNamespace>
+    <RootNamespace>FatCat.Logger</RootNamespace>
     <AssemblyName>FatCat-Logger</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -39,7 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Implementation\DefaultLogger.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Logging.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

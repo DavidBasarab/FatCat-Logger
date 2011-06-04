@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<results name=" NBehave.Narrator.Framework" version=" Version=0.5.0.252" date="5/23/2011" time="11:52 PM" themes="1" stories="2" scenarios="4" scenariosFailed="0" scenariosPending="0">
-  <theme name="" time="0.046" stories="2" scenarios="4" scenariosFailed="0" scenariosPending="0">
+<results name=" NBehave.Narrator.Framework" version=" Version=0.5.0.252" date="6/4/2011" time="12:41 PM" themes="1" stories="2" scenarios="6" scenariosFailed="0" scenariosPending="0">
+  <theme name="" time="0.045" stories="2" scenarios="6" scenariosFailed="0" scenariosPending="0">
     <stories>
-      <story name="" time="0.031" scenarios="1" scenariosFailed="0" scenariosPending="0">
+      <story name="" time="0.028" scenarios="1" scenariosFailed="0" scenariosPending="0">
         <narrative>
 </narrative>
         <scenarios>
-          <scenario name="Hook Up A Generic Feature" time="0.029" outcome="passed">
+          <scenario name="Hook Up A Generic Feature" time="0.027" outcome="passed">
             <actionStep name="&#x9;Given I want to test my hook up" outcome="passed" />
             <actionStep name="&#x9;When hook up my tests" outcome="passed" />
             <actionStep name="&#x9;Then my hook up should pass" outcome="passed" />
           </scenario>
         </scenarios>
       </story>
-      <story name="" time="0.02" scenarios="3" scenariosFailed="0" scenariosPending="0">
+      <story name="" time="0.022" scenarios="5" scenariosFailed="0" scenariosPending="0">
         <narrative>
 </narrative>
         <scenarios>
-          <scenario name="Logging Interface will expose a Log.Message" time="0.009" outcome="passed">
+          <scenario name="Logging Interface will expose a Log.Message" time="0.008" outcome="passed">
             <actionStep name="&#x9;Given I want to log a message" outcome="passed" />
             <actionStep name="&#x9;When I load the FatCat-Logger .dll" outcome="passed" />
             <actionStep name="&#x9;Then I should have a method to log a message" outcome="passed" />
@@ -27,10 +27,20 @@
             <actionStep name="&#x9;When I load the FatCat-Logger .dll" outcome="passed" />
             <actionStep name="&#x9;Then I should have a method to log a message taking a string" outcome="passed" />
           </scenario>
-          <scenario name="Logging Interface will expose a Log.Message with a arguments" time="0" outcome="passed">
+          <scenario name="Logging Interface will expose a Log.Message with a arguments" time="0.002" outcome="passed">
             <actionStep name="&#x9;Given I want to log a message" outcome="passed" />
             <actionStep name="&#x9;When I load the FatCat-Logger .dll" outcome="passed" />
             <actionStep name="&#x9;Then I should have a method to log a message taking a arguments" outcome="passed" />
+          </scenario>
+          <scenario name="Logging Interface will expose a Log.Exception for logging exceptions" time="0.001" outcome="passed">
+            <actionStep name="&#x9;Given I want to log an exception" outcome="passed" />
+            <actionStep name="&#x9;When I load the FatCat-Logger .dll" outcome="passed" />
+            <actionStep name="&#x9;Then I should have a method to log an exception" outcome="passed" />
+          </scenario>
+          <scenario name="Logging Interface will expose a Log.Exception for logging exceptions and accept an exception" time="0" outcome="passed">
+            <actionStep name="&#x9;Given I want to log an exception" outcome="passed" />
+            <actionStep name="&#x9;When I load the FatCat-Logger .dll" outcome="passed" />
+            <actionStep name="&#x9;Then I should have a method to log an exception and accepts an exception" outcome="passed" />
           </scenario>
         </scenarios>
       </story>

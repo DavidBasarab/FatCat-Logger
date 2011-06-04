@@ -11,5 +11,10 @@ namespace FatCat.Logger.Implementation
         {
             throw new NotImplementedException();
         }
+
+        public void Exception(Exception ex)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

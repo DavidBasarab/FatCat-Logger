@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using FatCat.Logger.Implementation;
+﻿using FatCat.Logger.Implementation;
 
 namespace FatCat.Logger
 {
     public static class Logger
     {
         private static Logging _log;
+
         public static Logging Log
         {
             get { return _log ?? (_log = new DefaultLogger()); }

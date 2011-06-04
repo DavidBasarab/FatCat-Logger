@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Reflection;
 using FatCat.Logger;
 using NBehave.Narrator.Framework;
 using NUnit.Framework;
@@ -10,7 +9,7 @@ namespace FatCat_Logger.AcceptanceTests.Steps
     [ActionSteps]
     public class LoggingInterfaceSteps
     {
-        public Type FatCatLoggerType { get; set; }
+        private Type FatCatLoggerType { get; set; }
 
         [Given("I want to log a message")]
         public void GivenWantToLogAMessage()
@@ -28,7 +27,6 @@ namespace FatCat_Logger.AcceptanceTests.Steps
         {
             Assert.That(FatCatLoggerType, Is.Not.Null);
             Assert.That(FatCatLoggerType.GetMethod("Message"), Is.Not.Null);
-            MethodInfo temp = null;
         }
 
         [Then("I should have a method to log a message taking a string")]
@@ -46,13 +44,40 @@ namespace FatCat_Logger.AcceptanceTests.Steps
         [Then("I should have a method to log a message taking a arguments")]
         public void ThenMessageWithArguements()
         {
-            var parameters = FatCatLoggerType.GetMethod("Message").GetParameters();
-
-            var haveMessageParameter = parameters
-                                           .Where(i => i.Name == "args" && i.ParameterType == typeof(object[]))
-                                           .Count() == 1;
+            var haveMessageParameter = MethodHasAParameter<object[]>("Message", "args");
 
             Assert.That(haveMessageParameter);
+        }
+
+        private bool MethodHasAParameter<T>(string methodName, string parameterName)
+        {
+            var parameters = FatCatLoggerType.GetMethod(methodName).GetParameters();
+
+            var parameterType = typeof (T);
+
+            return parameters
+                       .Where(i => i.Name == parameterName && i.ParameterType == parameterType)
+                       .Count() == 1;
+        }
+
+        [Given("I want to log an exception")]
+        public void GivenIWantToLogAnException()
+        {
+        }
+
+        [Then("I should have a method to log an exception")]
+        public void ThenIShouldHaveAMethodToLogAnException()
+        {
+            Assert.That(FatCatLoggerType, Is.Not.Null);
+            Assert.That(FatCatLoggerType.GetMethod("Exception"), Is.Not.Null);
+        }
+
+        [Then("I should have a method to log an exception and accepts an exception")]
+        public void ThenIShouldHaveAMethodToLogAnExceptionAndAcceptsAnException()
+        {
+            var exceptionParameter = MethodHasAParameter<Exception>("Exception", "ex");
+
+            Assert.That(exceptionParameter);
         }
     }
 }

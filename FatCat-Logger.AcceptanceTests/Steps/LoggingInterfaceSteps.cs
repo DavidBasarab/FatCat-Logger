@@ -25,8 +25,13 @@ namespace FatCat_Logger.AcceptanceTests.Steps
         [Then("I should have a method to log a message")]
         public void ThenIShouldHaveALogMessage()
         {
+            CheckMethodExists("Message");
+        }
+
+        private void CheckMethodExists(string methodName)
+        {
             Assert.That(FatCatLoggerType, Is.Not.Null);
-            Assert.That(FatCatLoggerType.GetMethod("Message"), Is.Not.Null);
+            Assert.That(FatCatLoggerType.GetMethod(methodName), Is.Not.Null);
         }
 
         [Then("I should have a method to log a message taking a string")]
@@ -68,8 +73,7 @@ namespace FatCat_Logger.AcceptanceTests.Steps
         [Then("I should have a method to log an exception")]
         public void ThenIShouldHaveAMethodToLogAnException()
         {
-            Assert.That(FatCatLoggerType, Is.Not.Null);
-            Assert.That(FatCatLoggerType.GetMethod("Exception"), Is.Not.Null);
+            CheckMethodExists("Exception");
         }
 
         [Then("I should have a method to log an exception and accepts an exception")]
@@ -78,6 +82,25 @@ namespace FatCat_Logger.AcceptanceTests.Steps
             var exceptionParameter = MethodHasAParameter<Exception>("Exception", "ex");
 
             Assert.That(exceptionParameter);
+        }
+
+        [Given("I want to log an event viewer message")]
+        public void GivenWantToLogAnEventVeiwerMessage()
+        {
+        }
+
+        [Then("I should have a method to log to the event viewer")]
+        public void ThenShouldHaveAMethodToLogToEventViewer()
+        {
+            CheckMethodExists("EventViewer");
+        }
+
+        [Then("I should have a method to log to the event viewer accepting an event viewer id, message, and arguments")]
+        public void ThenEventViewerAcceptEventViewIdMessageArguments()
+        {
+            Assert.That(MethodHasAParameter<int>("EventViewer", "eventViewerId"));
+            Assert.That(MethodHasAParameter<string>("EventViewer", "message"));
+            Assert.That(MethodHasAParameter<object[]>("EventViewer", "args"));
         }
     }
 }

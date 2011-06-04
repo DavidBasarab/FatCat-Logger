@@ -7,5 +7,7 @@ namespace FatCat.Logger
         void Message(string message, params object[] args);
 
         void Exception(Exception ex);
+
+        void EventViewer(int eventViewerId, string message, params object[] args);
     }
 }

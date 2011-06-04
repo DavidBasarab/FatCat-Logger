@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace FatCat.Logger.Implementation
 {
@@ -13,6 +10,11 @@ namespace FatCat.Logger.Implementation
         }
 
         public void Exception(Exception ex)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void EventViewer(int eventViewerId, string message, params object[] args)
         {
             throw new NotImplementedException();
         }

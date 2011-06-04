@@ -26,3 +26,11 @@ Scenario: Logging Interface will expose a Log.Exception for logging exceptions a
 	Given I want to log an exception
 	When I load the FatCat-Logger .dll
 	Then I should have a method to log an exception and accepts an exception
+Scenario: Logging Interface will expose a Log.EventViewer for logging messages to the event viewer
+	Given I want to log an event viewer message
+	When I load the FatCat-Logger .dll
+	Then I should have a method to log to the event viewer
+Scenario: Logging Interface will expose a Log.EventViewer accepting a event viewer id, message, and arguments
+	Given I want to log an event viewer message
+	When I load the FatCat-Logger .dll
+	Then I should have a method to log to the event viewer accepting an event viewer id, message, and arguments

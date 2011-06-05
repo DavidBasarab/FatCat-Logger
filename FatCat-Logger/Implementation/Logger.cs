@@ -1,6 +1,6 @@
-﻿using FatCat.Logger.Implementation;
+﻿using FatCat.Logger.Interface;
 
-namespace FatCat.Logger
+namespace FatCat.Logger.Implementation
 {
     public static class Logger
     {

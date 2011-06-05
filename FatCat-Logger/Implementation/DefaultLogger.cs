@@ -1,10 +1,11 @@
 ﻿using System;
+using FatCat.Logger.Interface;
 
 namespace FatCat.Logger.Implementation
 {
     internal class DefaultLogger : Logging
     {
-        public void Message(string message, params object[] args)
+        public void Message(LogLevel level, string message, params object[] args)
         {
             throw new NotImplementedException();
         }
@@ -14,7 +15,7 @@ namespace FatCat.Logger.Implementation
             throw new NotImplementedException();
         }
 
-        public void EventViewer(int eventViewerId, string message, params object[] args)
+        public void EventViewer(int eventViewerId, LogLevel level, string message, params object[] args)
         {
             throw new NotImplementedException();
         }
